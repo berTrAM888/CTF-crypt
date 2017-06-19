@@ -1,8 +1,8 @@
-# /usr/bin/python27
+#!/usr/bin/env python
 #-*- coding:utf-8-*-
 import hashlib
 
-def md5(string):
+def md5_encode(string):
 	m=hashlib.md5()
-	m=m.update(string)
+	m.update(string)
 	return m.hexdigest()
