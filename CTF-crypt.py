@@ -1,25 +1,18 @@
 # /usr/bin/python27
 # -*- coding:utf-8 -*-
-import base64
+import sys
+from modules import base
+from modules import fence
+from modules import html
+from modules import md
+from modules import morse
+from modules import url
+from modules import caesar
 
-class base:
-	string=""
-	option=""
-	
-	def base_64(string,option):
-		if option=="decode":
-			return base64.b64decode(string)
-		else:
-			return base64.b64encode(string)
 
-	def base_32(string,option):
-		if option='decode':
-			return base64.b32decode(string)
-		else:
-			return base64.b32encode(string)
+def init(string='',option='',num=0,split_words=''):
+	print morse.morse_crypt('berTrAM is cool','encode',' ')
 
-	def base_16(string,option):
-		if option='decode':
-			return base64.b16decode(string)
-		else:
-			return base64.b16decode(string)
+
+if __name__=='__main__':
+	init()
