@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 import re
 
-def fence_crypt(string,option,num=1):
+def fence_crypt(string,option='decode',num=1):
 	if option=='encode':
 		string=left_words(string)
 	else:
