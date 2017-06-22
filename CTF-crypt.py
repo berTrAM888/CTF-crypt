@@ -15,6 +15,12 @@ from modules.caesar import caesar_crypt
 def print_banner():
 	print "test"
 
+def check_opt():
+	if len(sys.argv)==1:
+		print "Parameter is None"
+		print "Please input -h/--help to see how to use it"
+		sys.exit()
+
 def get_opt():
 	usage = "usage: %prog [options] <args>"  
 	parser=OptionParser(usage=usage)
@@ -26,6 +32,7 @@ def get_opt():
 	return options
 def main():
 	print_banner()
+	check_opt()
 	options=get_opt()
 	if options.crypt_module[:4]=='base':
 		if options.crypt_string== None or options.crypt_option== None:
