@@ -73,5 +73,15 @@ def main():
 			sys.exit()
 		else:
 			print url_crypt(options.crypt_string,options.crypt_option)	
+	elif options.crypt_module== 'md5':
+		if options.crypt_string==None :
+			print "Parameter missing"
+			print "Please input -h/--help to see how to use it"
+			sys.exit()
+		else:
+			print md5_encode(options.crypt_string)
+	else:
+		print "No such module,Please check the menu!"
+		sys.exit()
 if __name__=='__main__':
 	main()
